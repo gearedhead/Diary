@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>TEsting</title>
+  </head>
+  <script src="jquery.min.js"></script>
+  <body>
+    
+    <
+    <table>
+      <tr>
+          <th>IFSC</th>
+          <th id="p2">ACCOUNT NUMBER</th>
+          <th id="p3">NAME</th>
+		  <th id="p4">IFSC</th>
+          <th>ADDRESS</th>
+      </tr>
+      </table>
+
+<button onclick="copyToClipboard('#p2')">Copy TEXT 2</button>
+  
+<br/><br/><input class="textBox" type="text" id="" placeholder="Dont belive me?..TEST it here..;)" />
+</center>
+<script>
+function copyToClipboard(element) {
+  var data =document.getElementById("p3").innerHTML
+  var data2 =document.getElementById("p4").innerHTML
+  var jsarray= new Array(data,data2);
+  var dummy =$('<input>').val(jsarray).appendTo('body').select()
+  document.execCommand('copy');
+  document.body.removeChild(dummy);
+  console.log(jsarray);
+}
+</script>
+
+  </body>
+</html>

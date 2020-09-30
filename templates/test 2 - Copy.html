@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>TEsting</title>
+  </head>
+  <script src="jquery.min.js"></script>
+  <body>
+    
+    <
+    <table>
+      <tr>
+          <th>IFSC</th>
+          <th id="p2">ACCOUNT NUMBER</th>
+          <th id="p2">NAME</th>
+          <th>ADDRESS</th>
+      </tr>
+      </table>
+
+<button onclick="copyToClipboard('anishsss')">Copy TEXT 1</button>
+<button onclick="copyToClipboard('#p2')">Copy TEXT 2</button>
+  
+<br/><br/><input class="textBox" type="text" id="" placeholder="Dont belive me?..TEST it here..;)" />
+</center>
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
+
+  </body>
+</html>

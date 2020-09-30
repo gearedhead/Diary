@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bank Account Details</title>
+
+    </head>
+    <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+    <body>
+        <h1>Bank Account Details</h1>
+        <table>
+            <tr>
+                <th>NAME</th>
+                <th>ACCOUNT NUMBER</th>
+                <th>ADDRESS</th>
+            </tr>
+            {% for restmb in restmb %}
+            <tr>
+                <td>{{restmb[2]}}</td>
+                <td>{{restmb[3]}}</td>
+                <td>{{restmb[4]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>

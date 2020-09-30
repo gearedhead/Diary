@@ -1,0 +1,24 @@
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
+
+<script src="jquery.min.js"></script>
+
+        <p style="color:wheat;font-size:55px;text-align:center;">How to copy a TEXT to Clipboard on a Button-Click</p>
+
+<center>
+<p id="p1">Anish</p>
+<p id="p2">Hi, I'm the 2nd TEXT</p><br/>
+
+<button onclick="copyToClipboard('anishsss')">Copy TEXT 1</button>
+<button onclick="copyToClipboard('#p2')">Copy TEXT 2</button>
+  
+<br/><br/><input class="textBox" type="text" id="" placeholder="Dont belive me?..TEST it here..;)" />
+</center>
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
